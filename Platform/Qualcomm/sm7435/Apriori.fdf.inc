@@ -5,7 +5,6 @@ APRIORI DXE {
   #
   INF  MdeModulePkg/Universal/PCD/Dxe/Pcd.inf
   INF  MdeModulePkg/Core/Dxe/DxeMain.inf
-  INF  Platform/EFI_Binaries/Drivers/sm7435/EnvDxe/EnvDxe.inf
   INF  MdeModulePkg/Universal/ReportStatusCodeRouter/RuntimeDxe/ReportStatusCodeRouterRuntimeDxe.inf
   INF  MdeModulePkg/Universal/StatusCodeHandler/RuntimeDxe/StatusCodeHandlerRuntimeDxe.inf
   INF  MdeModulePkg/Core/RuntimeDxe/RuntimeDxe.inf
@@ -20,7 +19,6 @@ APRIORI DXE {
   INF  Platform/EFI_Binaries/Drivers/sm7435/HWIODxe/HWIODxe.inf
   INF  Platform/EFI_Binaries/Drivers/sm7435/ChipInfoDxe/ChipInfoDxe.inf
   INF  Platform/EFI_Binaries/Drivers/sm7435/PlatformInfoDxe/PlatformInfoDxe.inf
-  INF  Platform/EFI_Binaries/Drivers/sm7435/ProjectInfoDxe/ProjectInfoDxe.inf
   INF  Platform/EFI_Binaries/Drivers/sm7435/HALIOMMUDxe/HALIOMMUDxe.inf
   INF  Platform/EFI_Binaries/Drivers/sm7435/GLinkDxe/GLinkDxe.inf
   INF  Platform/EFI_Binaries/Drivers/sm7435/CmdDbDxe/CmdDbDxe.inf
@@ -52,8 +50,6 @@ APRIORI DXE {
   INF  Platform/EFI_Binaries/Drivers/sm7435/ResetRuntimeDxe/ResetRuntimeDxe.inf
   INF  Platform/EFI_Binaries/Drivers/sm7435/PmicDxe/PmicDxeLa.inf
   INF  Platform/EFI_Binaries/Drivers/sm7435/PILDxe/PILDxe.inf
-  INF  Platform/EFI_Binaries/Drivers/sm7435/PILProxyDxe/PILProxyDxe.inf
-  INF  Platform/EFI_Binaries/Drivers/sm7435/SPSSDxe/SPSSDxe.inf
 
 !if $(SECURE_BOOT_ENABLE) == TRUE
   INF  SecurityPkg/VariableAuthenticated/SecureBootConfigDxe/SecureBootConfigDxe.inf
@@ -74,24 +70,25 @@ APRIORI DXE {
   INF  MdeModulePkg/Universal/BdsDxe/BdsDxe.inf
 
   INF  Platform/EFI_Binaries/Drivers/sm7435/I2CDxe/I2CDxe.inf
-  INF  Platform/EFI_Binaries/Drivers/sm7435/SPIDxe/SPIDxe.inf
   INF  Platform/EFI_Binaries/Drivers/sm7435/UsbPwrCtrlDxe/UsbPwrCtrlDxe.inf
   INF  Platform/EFI_Binaries/Drivers/sm7435/QcomChargerDxe/QcomChargerDxeLA.inf
   INF  Platform/EFI_Binaries/Drivers/sm7435/ChargerExDxe/ChargerExDxe.inf
+!if $(TARGET) != DEBUG
   INF  Platform/EFI_Binaries/Drivers/sm7435/PmicGlinkDxe/PmicGlinkDxe.inf
+!endif
   INF  Platform/EFI_Binaries/Drivers/sm7435/UsbfnDwc3Dxe/UsbfnDwc3Dxe.inf
   INF  Platform/EFI_Binaries/Drivers/sm7435/UsbConfigDxe/UsbConfigDxe.inf
+!if $(TARGET) != DEBUG
   INF  Platform/EFI_Binaries/Drivers/sm7435/UsbInitDxe/UsbInitDxe.inf
-  INF  Platform/EFI_Binaries/Drivers/sm7435/XhciPciEmulationDxe/XhciPciEmulationDxe.inf
+!endif
+!if $(TARGET) != DEBUG
   INF  Platform/EFI_Binaries/Drivers/sm7435/XhciDxe/XhciDxe.inf
+!endif
   INF  Platform/EFI_Binaries/Drivers/sm7435/TsensDxe/TsensDxe.inf
 
   INF  Silicon/Qualcomm/QcomPkg/Drivers/SimpleFbDxe/SimpleFbDxe.inf
   INF  Platform/EFI_Binaries/Drivers/sm7435/GpiDxe/GpiDxe.inf
   INF  Platform/EFI_Binaries/Drivers/sm7435/DDRInfoDxe/DDRInfoDxe.inf
-  INF  Platform/EFI_Binaries/Drivers/sm7435/FeatureEnablerDxe/FeatureEnablerDxe.inf
-  INF  Platform/EFI_Binaries/Drivers/sm7435/UCDxe/UCDxe.inf
-  INF  Platform/EFI_Binaries/Drivers/sm7435/RNGDxe/RngDxe.inf
   INF  Platform/EFI_Binaries/Drivers/sm7435/UsbMsdDxe/UsbMsdDxe.inf
   INF  Platform/EFI_Binaries/Drivers/sm7435/UsbDeviceDxe/UsbDeviceDxe.inf
      

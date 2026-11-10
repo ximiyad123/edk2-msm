@@ -39,23 +39,17 @@
   INF  Platform/EFI_Binaries/Drivers/sm7435/PILDxe/PILDxe.inf
   INF  Platform/EFI_Binaries/Drivers/sm7435/ShmBridgeDxe/ShmBridgeDxeLA.inf
   INF  Platform/EFI_Binaries/Drivers/sm7435/ResetRuntimeDxe/ResetRuntimeDxe.inf
-  INF  Platform/EFI_Binaries/Drivers/sm7435/EnvDxe/EnvDxe.inf
   INF  Platform/EFI_Binaries/Drivers/sm7435/IPCCDxe/IPCCDxe.inf
-  INF  Platform/EFI_Binaries/Drivers/sm7435/ProjectInfoDxe/ProjectInfoDxe.inf
   INF  Platform/EFI_Binaries/Drivers/sm7435/CmdDbDxe/CmdDbDxe.inf
   INF  Platform/EFI_Binaries/Drivers/sm7435/PwrUtilsDxe/PwrUtilsDxe.inf
   INF  Platform/EFI_Binaries/Drivers/sm7435/RpmhDxe/RpmhDxe.inf
   INF  Platform/EFI_Binaries/Drivers/sm7435/ICBDxe/ICBDxe.inf
-  INF  Platform/EFI_Binaries/Drivers/sm7435/CPRDxe/CPRDxe.inf
-  INF  Platform/EFI_Binaries/Drivers/sm7435/SPIDxe/SPIDxe.inf
-  INF  Platform/EFI_Binaries/Drivers/sm7435/FeatureEnablerDxe/FeatureEnablerDxe.inf
-  INF  Platform/EFI_Binaries/Drivers/sm7435/DisplayDxe/DisplayDxe.inf
-  INF  Platform/EFI_Binaries/Drivers/sm7435/ButtonsDxe/ButtonsDxe.inf
+!if $(TARGET) != DEBUG
   INF  Platform/EFI_Binaries/Drivers/sm7435/PmicGlinkDxe/PmicGlinkDxe.inf
-  INF  Platform/EFI_Binaries/Drivers/sm7435/XhciPciEmulationDxe/XhciPciEmulationDxe.inf
+!endif
+!if $(TARGET) != DEBUG
   INF  Platform/EFI_Binaries/Drivers/sm7435/XhciDxe/XhciDxe.inf
+!endif
+!if $(TARGET) != DEBUG
   INF  Platform/EFI_Binaries/Drivers/sm7435/UsbInitDxe/UsbInitDxe.inf
-  INF  Platform/EFI_Binaries/Drivers/sm7435/UCDxe/UCDxe.inf
-  INF  Platform/EFI_Binaries/Drivers/sm7435/RNGDxe/RngDxe.inf
-  INF  Platform/EFI_Binaries/Drivers/sm7435/PILProxyDxe/PILProxyDxe.inf
-  INF  Platform/EFI_Binaries/Drivers/sm7435/SPSSDxe/SPSSDxe.inf
+!endif
